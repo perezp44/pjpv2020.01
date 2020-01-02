@@ -7,9 +7,22 @@
 
 # 2) una vez ya creado el Rproject que contiene al paquete, ejecutas en la CONSOLA: usethis::use_git(). Te dira que si haces el primer commit. Le dices que SI. Te dira si reinicias RStudio. le dices que SÍ
 
+#--------------- GIT:  http://happygitwithr.com/github-pat.html#step-by-step
+#--------------- GIT:  https://happygitwithr.com/rstudio-git-github.html     (mas nuevo!!!)
+usethis::use_git()           #- activa GIT. te pregunta si haces el commit (le digo que NO). Se reinicia RStudio para q aparezca git pane
+
+#- Para que cada commit que hagas no tengas que dar la contraseña, has de generar token en Github y despues meterlo en el el archivo . Renviron
+#- Asi es como he generado el GIT token (http://happygitwithr.com/github-pat.html#step-by-step)
+#- haciendo caso a Jenny he generado un new token en Github, concretamente en: https://github.com/settings/tokens
+#- Una vez tienes el token haces `usethis::edit_r_environ()`
+#- Se abrirá el archivo .Renviron y he tenido q poner una linea mas con:  GITHUB_PAT=número del token (q es un numero largito, 40)
+#- Sys.getenv("GITHUB_PAT")(Con esta instrucción accedes al token)
+
+
+
+
 # 3) Una vez RStudio se haya reiniciado, ejecutas en la CONSOLA: usethis::use_github()  . Te preguntará que qué git protocol quieres usar. Selecciona https. Te preguntará si la Descvription está OK. Le dices que SI. Se creará el repo en Github y añadirá el remote origin y alguna cosa mas y lo dejará casí niquelado.
-
-
+usethis::use_github()
 
 
 # SEGUNDA PARTE: tuneando -------------------------
@@ -21,7 +34,6 @@ usethis::use_mit_license(name = "Pedro J. Pérez")
 #usethis::use_package("tidyverse", "Suggests")     #- no buena idea xq es un meta-pkg
 usethis::use_readme_md()                           #- modifica a tu gusto la README.md
 usethis::use_news_md()                             #- tuneala
-
 
 #- modificamos la DESCRIPTION
 usethis::use_description(fields = list(Title = "Paquete de uso personal",
@@ -39,16 +51,7 @@ usethis::use_tibble()  #- If you want to avoid ugly data.frame printing for tibb
 #usethis::use_test()   # If you look into its source code, it’s really not that complex – but it does use a lot of cool helper functions!
 
 
-#--------------- GIT:  http://happygitwithr.com/github-pat.html#step-by-step
-#--------------- GIT:  https://happygitwithr.com/rstudio-git-github.html     (mas nuevo!!!)
-usethis::use_git()           #- activa GIT. te pregunta si haces el commit (le digo que NO). Se reinicia RStudio para q aparezca git pane
 
-#- Para que cada commit que hagas no tengas que dar la contraseña, has de generar token en Github y despues meterlo en el el archivo . Renviron
-#- Asi es como he generado el GIT token (http://happygitwithr.com/github-pat.html#step-by-step)
-#- haciendo caso a Jenny he generado un new token en Github, concretamente en: https://github.com/settings/tokens
-#- Una vez tienes el token haces `usethis::edit_r_environ()`
-#- Se abrirá el archivo .Renviron y he tenido q poner una linea mas con:  GITHUB_PAT=número del token (q es un numero largito, 40)
-#- Sys.getenv("GITHUB_PAT")(Con esta instrucción accedes al token)
 
 
 #usethis::edit_r_environ()  #- to easily access the right file for editing)

@@ -1,15 +1,17 @@
 Package: pjpv2020.01
-Title: What the Package Does (One Line, Title Case)
+Title: Paquete de uso personal
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Pedro",
+           family = "Perez",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: MIT + file LICENSE
+           email = "pedro.j.perez@uv.es")
+Description: Paquete para uso personal con algunas
+    funciones y conjuntos de datos
+License: What license it uses
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/perezp44/pjpv2020.01
-BugReports: https://github.com/perezp44/pjpv2020.01/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
+Imports: 
+    tibble
