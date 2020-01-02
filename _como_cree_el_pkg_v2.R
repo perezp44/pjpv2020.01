@@ -75,6 +75,37 @@ git push -u origin master
 
 
 
+#- Sharla
+#usethis::use_data_raw()
+#usethis::use_data(delay_codes)
+#usethis::use_r("setup")   #- para crear una funcion llamada setup()
+#- And when I build my package (command + shift + L, command + shift + D, and command + shift + B are your best friends), delay_codes is actually an object available in the package!
+
+
+
+
+#--------------- easily create and/or edit important configuration files
+#- Most functions have a scope argument which can be either “user” or “project”.
+#- This lets you control the scope of your changes: either to the current project,
+#- or for all projects for the current user (the default).
+# edit_r_profile() #- R code run on start up
+# edit_r_environ() #- environment variables
+# edit_git_config()
+# edit_git_ignore()
+
+#--------------- set of functions lets you quickly jump to important websites
+# browse_github()
+# browse_github_issues()
+# browse_travis()
+# browse_cran()
+
+
+use_()
+use_data()   #- save package data in the correct format
+use_data_raw()
+
+
+
 
 
 # Vignette ------------------
