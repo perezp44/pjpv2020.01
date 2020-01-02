@@ -218,15 +218,6 @@ browseVignettes("LAU2boundaries4spain")
 #In my case it reduced the out-file size from 72MB to 3MB! No kidding =)
 
 
-#- proyecciones
-http://www.juntadeandalucia.es/medioambiente/site/rediam/menuitem.04dc44281e5d53cf8ca78ca731525ea0/?vgnextoid=2a412abcb86a2210VgnVCM1000001325e50aRCRD&lr=lang_es
-http://spatialreference.org/ref/epsg/ed50-utm-zone-30n/   (y es el ultimo formato)
-
-http://www.mapama.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/caracteristicas_wms.aspx
-Dices que hay que pasar de  sistema de referencia geodésico ETRS89 sin proyección ... a, por ejemplo UTM-30N o LAEA. Mi unica experiencia con esto es que conseguí poner a Canarias en el mismo sistema de referencia que la península, lo hice con la linea de abajo.
-library(sf)
-prov_can_sf<- st_transform(prov_can_sf, 4258) #- esta linea pasa las geometrias de Canarias de epsg(SRID):4326 a epsg(SRID): 4258
-
 #-  consejos de Maelem
 # http://www.masalmon.eu/2017/06/17/automatictools/?utm_content=buffere260d&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
