@@ -12,15 +12,14 @@
 pjp_unique_values <- function(df, truncate = FALSE, nn_truncate = 500) {
     bb <- data.frame(variables = names(df))
     cc <- df %>% purrr::map(unique) %>% purrr::map(length) %>% purrr::as_vector() %>%
-                 tibble::as_tibble() %>% dplyr::rename(nn_unique = value)
+                 tibble::enframe(name = NULL) %>% dplyr::rename(nn_unique = value)
     dd <- df %>% purrr::map(unique) %>% purrr::map(sort, na.last = FALSE) %>%
                  purrr::map(paste, collapse = " - ") %>% purrr::as_vector() %>%
-                 tibble::as_tibble() %>% dplyr::rename(unique_values = value)
+                 tibble::enframe(name = NULL) %>% dplyr::rename(unique_values = value)
 if (truncate == TRUE){
   dd <- dd %>% dplyr::mutate(unique_values = stringr::str_sub(unique_values, start = 1, end = nn_truncate) )
 }
 ee <- bind_cols(bb, cc,dd)
 return(ee)
 }
-
 

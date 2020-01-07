@@ -4,8 +4,6 @@
 #' @param x a vector
 #' @param y a vector
 #' @return Un nuevo vector con los elemntos de x q no estan en y
-#' @examples
-#' aa <- pjp_not_in(x,y)
 #' @export
 
 

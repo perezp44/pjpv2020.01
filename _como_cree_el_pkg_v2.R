@@ -96,11 +96,10 @@ use_package("stringr")
 
 
 
-, "dplyr", "tibble", "stringr")
+use_namespace() #- creo que no hace falta
 
-
-
-
+#- SEXTA PARTE: construir el pkg
+#- te vas a Build >> Check
 
 
 #- And when I build my package (command + shift + L, command + shift + D, and command + shift + B are your best friends), delay_codes is actually an object available in the package!
