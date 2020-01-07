@@ -102,13 +102,24 @@ usethis::use_pipe()   #---------------------------------------- JEY!!!!
 #- SEPTIMA:: y super importante!!!!
 devtools::document()  #- para que genere la documentacion de las funciones
 
-#use_namespace() #- creo que no hace falta
-
-#- SEXTA PARTE: construir el pkg
-#- te vas a Build >> Check
 
 
-#- And when I build my package (command + shift + L, command + shift + D, and command + shift + B are your best friends), delay_codes is actually an object available in the package!
+
+#- OCTAVA: Cuando quieras añadir un nuevo conjunto de datos al pkg
+#- PARA AÑADIR un nuevo df u objeto:
+#- 1) Cargas el objeto en memoria de R con un archivo de ./data-raw/
+#- 2) Para q vaya a memoria del pkg has de: devtools::use_data(CNIG_CCAA_sf, overwrite = TRUE) #
+#- 3) Añadir la documentacion creando un fichero roxygen en ./R/mis_datos.R
+#- 4) Finalmente has de actualizar la documentacion con: devtools::document()
+#- 5) Llevarlo a Github
+
+
+
+#- NOVENA: Cuando quieras añadir una nueva f. al pkg
+#- 1) Añadir el fichero con la definicion de la f en : ./R/my_funcion.R
+#- 3) En ese fichero ya pones la documentacion y si lo exportas con @export
+#- 4) Finalmente has de actualizar la documentacion con: devtools::document()
+#- 5) Llevarlo a Github
 
 
 
