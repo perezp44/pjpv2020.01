@@ -20,7 +20,7 @@ pjp_f_unique_values <- function(df, truncate = FALSE, nn_truncate = 500) {
 if (truncate == TRUE){
   dd <- dd %>% dplyr::mutate(unique_values = stringr::str_sub(unique_values, start = 1, end = nn_truncate) )
 }
-ee <- bind_cols(bb, cc,dd)
+ee <- dplyr::bind_cols(bb, cc,dd)
 return(ee)
 }
 

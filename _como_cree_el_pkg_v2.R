@@ -96,9 +96,12 @@ usethis::use_package("magrittr")
 usethis::use_pipe()   #---------------------------------------- JEY!!!!
 #use_package("tibble") #- ya estab eb IMPORTS
 
+
+
+#- SEPTIMA:: y super importante!!!!
 devtools::document()  #- para que genere la documentacion de las funciones
 
-use_namespace() #- creo que no hace falta
+#use_namespace() #- creo que no hace falta
 
 #- SEXTA PARTE: construir el pkg
 #- te vas a Build >> Check
