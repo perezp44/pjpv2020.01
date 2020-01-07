@@ -6,11 +6,11 @@
 #' @param nn el nº de decimales (Default = 2)
 #' @return Un nuevo \code{df} con sus valores redondeados a \code{nn}
 #' @examples
-#' pjp_df_decimales(cars, nn = 2)
+#' pjp_f_decimales(cars, nn = 2)
 #' @export
 
 
-pjp_df_decimales <- function(df, nn = 2) {
+pjp_f_decimales <- function(df, nn = 2) {
   is.num <- sapply(df, is.numeric)
   df[is.num] <- lapply(df[is.num], round, nn)
   df

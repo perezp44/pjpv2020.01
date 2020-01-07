@@ -4,12 +4,13 @@
 #' @param truncate (If you want to truncate the uniques values. The default = TRUE)
 #' @param nn_truncate  (if you truncate, this is the maximun character that you will see. The default = 500)
 #' @return Un nuevo \code{df} con los valores unicos del df original
+#' @importFrom magrittr `%>%`
 #' @export
 #' @examples
-#' pjp_unique_values(iris)
+#' pjp_f_unique_values(iris)
 
 
-pjp_unique_values <- function(df, truncate = FALSE, nn_truncate = 500) {
+pjp_f_unique_values <- function(df, truncate = FALSE, nn_truncate = 500) {
     bb <- data.frame(variables = names(df))
     cc <- df %>% purrr::map(unique) %>% purrr::map(length) %>% purrr::as_vector() %>%
                  tibble::enframe(name = NULL) %>% dplyr::rename(nn_unique = value)

@@ -89,12 +89,14 @@ usethis::use_r("pjp_unique_values") #- para crear o modificar el fichero de la f
 
 
 #- SEXTA PARTE: las dependencias
-use_package("purrr")
-use_package("dplyr")
-use_package("stringr")
+usethis::use_package("purrr")
+usethis::use_package("dplyr")
+usethis::use_package("stringr")
+usethis::use_package("magrittr")
+usethis::use_pipe()   #---------------------------------------- JEY!!!!
 #use_package("tibble") #- ya estab eb IMPORTS
 
-
+devtools::document()  #- para que genere la documentacion de las funciones
 
 use_namespace() #- creo que no hace falta
 

@@ -17,6 +17,7 @@ Imports:
     tibble,
     purrr,
     dplyr,
-    stringr
+    stringr,
+    magrittr
 URL: https://github.com/perezp44/pjpv2020.01
 BugReports: https://github.com/perezp44/pjpv2020.01/issues

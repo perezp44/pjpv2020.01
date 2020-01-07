@@ -7,7 +7,7 @@
 #' @export
 
 
-pjp_not_in <- function(x,y) {
+pjp_f_not_in <- function(x,y) {
       # aa <- !('%in%'(x,y))  #- esta f. es not_in
       # xx <- x[aa]
       x[!x %in% y]

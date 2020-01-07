@@ -4,11 +4,11 @@
 #' @param nn_pjp  (cuantos valores unicos permites como maximo, default=50)
 #' @export
 #' @examples
-#' pjp_df_valores_unicos(cars)
+#' pjp_f_valores_unicos(cars)
 
 
 
-pjp_df_valores_unicos <- function(df, nn_pjp = 50) {
+pjp_f_valores_unicos <- function(df, nn_pjp = 50) {
 cc <- data.frame(x = 1:nn_pjp)
   for(ii in 1:length(df)){
     aa <- as.vector(unique(df[[ii]]))
