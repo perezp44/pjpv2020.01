@@ -56,8 +56,9 @@ usethis::use_github_links() #- Populates the URL and BugReports fields of a GitH
 
 
 
-#----------------------
-use_build_ignore("_como_cree_el_pkg_v2.R")
+#---------------------- añadir a build ignore
+usethis:use_build_ignore("_como_cree_el_pkg_v2.R")
+usethis::use_build_ignore("./_f_en_curso/")
 
 
 
@@ -316,4 +317,14 @@ person("Bea", "Hernández", role = "rev",
 
 
 
+#- para instalar y usar usar las funciones de pjpv2020.01 package
 
+remotes::install_github("perezp44/pjpv2020.01")
+library(pjpv2020.01)
+df <- pjp_data_pob_mun_1996_2019
+df <- pjp_data_cod_mun_INE
+df <- pjp_data_cod_prov_INE
+
+
+xx <- pjp_f_round_nice(iris)
+pjp_unique_values(df)
