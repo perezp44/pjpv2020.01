@@ -59,6 +59,7 @@ usethis::use_github_links() #- Populates the URL and BugReports fields of a GitH
 #---------------------- añadir a build ignore
 usethis:use_build_ignore("_como_cree_el_pkg_v2.R")
 usethis::use_build_ignore("./_f_en_curso/")
+usethis::use_build_ignore("./_documentacion_old/")
 
 
 
@@ -78,18 +79,18 @@ git push -u origin master
 # git push -u origin master
 
 
-#- CUARTA PARTE: subir ficheros de datos (partiendo desde RAW)
+#- CUARTA PARTE: subir ficheros de datos (partiendo desde RAW) --------
 usethis::use_data_raw()  #- crea un directorio "data-raw", y dentro crea un fichero DATASET.R. Ese fichero solo tiene la instrucción usethis::use_data("DATASET") para una vez creado DATASET, pues documentarlo etc....
 #- una vez has creado la carpeta /data-raw/ , alli está un fichero que me crea los df que quiero exportar en la carpeta /data/
 #- Recuerda que has de crear un fichero .R para cada df que quieras exportar (en la carpeta /R/)
 
 
-#- QUINTA PARTE: crear un fichero para cada funcion que quieras expòrtar (en la carpeta /R/)
+#- QUINTA PARTE: crear un fichero para cada funcion que quieras expòrtar (en la carpeta /R/) ------
 usethis::use_r("pjp_unique_values") #- para crear o modificar el fichero de la funcion
 
 
 
-#- SEXTA PARTE: las dependencias
+#- SEXTA PARTE: las dependencias --------------------------
 usethis::use_package("purrr")
 usethis::use_package("dplyr")
 usethis::use_package("stringr")
@@ -99,13 +100,13 @@ usethis::use_pipe()   #---------------------------------------- JEY!!!!
 
 
 
-#- SEPTIMA:: y super importante!!!!
+#- SEPTIMA:: y super importante!!!! ------------------
 devtools::document()  #- para que genere la documentacion de las funciones
 
 
 
 
-#- OCTAVA: Cuando quieras añadir un nuevo conjunto de datos al pkg
+#- OCTAVA: Cuando quieras añadir un nuevo conjunto de datos al pkg ---------------------
 #- PARA AÑADIR un nuevo df u objeto:
 #- 1) Cargas el objeto en memoria de R con un archivo de ./data-raw/
 #- 2) Para q vaya a memoria del pkg has de: devtools::use_data(CNIG_CCAA_sf, overwrite = TRUE) #
@@ -115,7 +116,7 @@ devtools::document()  #- para que genere la documentacion de las funciones
 
 
 
-#- NOVENA: Cuando quieras añadir una nueva f. al pkg
+#- NOVENA: Cuando quieras añadir una nueva f. al pkg --------------------------
 #- 1) Añadir el fichero con la definicion de la f en : ./R/my_funcion.R
 #- 3) En ese fichero ya pones la documentacion y si lo exportas con @export
 #- 4) Finalmente has de actualizar la documentacion con: devtools::document()
@@ -142,7 +143,7 @@ devtools::document()  #- para que genere la documentacion de las funciones
 
 
 
-# Vignette ------------------
+# Vignettes ------------------
 
 my_name_vignette <- paste0("intro-to-", name_of_the_pkg)
 use_vignette(my_name_vignette) #- sets you up for success by configuring DESCRIPTION and creating a .Rmd template in vignettes/
@@ -188,34 +189,18 @@ devtools::build_vignettes()  #- viñetas
 
 devtools::document()         #- procesa los roxygen comments y las vignettes
 
-#------------------------------------------------------
-#------------------------------------------------------ PARA DESPUES CORRERLO
-#------------------------------------------------------
 
 
+
+# MAS COSAS ------------------------------
+# Para despues correrlo
 
 devtools::check(cran = FALSE)            #- chequea
 devtools::check()           #- chequea
 
-
 devtools::build()
 
 
-
-#------------------------------ USAR el pkg
-
-
-
-# devtools::install_github("perezp44/LAU2boundaries4spain", force = TRUE)
-library(LAU2boundaries4spain)
-library(tidyverse)
-
-aa <- ls("package:LAU2boundaries4spain", all = TRUE) %>% as.data.frame()#- ves lo que hay en mypkgDataforblog
-help(package = LAU2boundaries4spain)
-bb <- IGN_mun_17s
-names(bb)
-cc <- bb %>% filter(NombreMuni  == "Pancrudo")
-bb[bb$NombreCCAA=="Galicia",]
 
 #--------------------   Github
 # git remote add origin https://github.com/perezp44/mypkgfordata.git
@@ -315,8 +300,7 @@ person("Bea", "Hernández", role = "rev",
 
 
 
-# Biblio: -------------
-
+# YY: Biblio: -----------------------------------------------------------------------
 
 # Web del pkg usethis: https://usethis.r-lib.org/
 
@@ -327,13 +311,13 @@ person("Bea", "Hernández", role = "rev",
 # Post q hace un pkg para hacer informes periodicos: https://sharla.party/post/usethis-for-reporting/
 
 
-
-#- para instalar y usar usar las funciones de pjpv2020.01 package
-
+# ZZ: Usar el pkg pjpv2020.01 -----------------------------------------------------------------------------------------------
+# - z.1 para instalar y usar las funciones de pjpv2020.01 package --------------
 remotes::install_github("perezp44/pjpv2020.01")
 library(pjpv2020.01)
 df <- pjp_data_pob_mun_1996_2019
 
+# - z.2 usar las funciones de pjpv2020.01 package --------------
 zz <- df %>% pjp_f_estadisticos_basicos()
 
 zz1 <- df %>% pjp_f_unique_values()
@@ -341,6 +325,5 @@ zz2 <- df %>% pjp_f_valores_unicos(nn_pjp = 40)
 
 df <- pjp_data_cod_mun_INE
 df <- pjp_data_cod_prov_INE
-
 
 xx <- pjp_f_decimales(iris)
