@@ -19,8 +19,6 @@ usethis::use_git()           #- activa GIT. te pregunta si haces el commit (le d
 #- Sys.getenv("GITHUB_PAT")(Con esta instrucción accedes al token)
 
 
-
-
 # 3) Una vez RStudio se haya reiniciado, ejecutas en la CONSOLA: usethis::use_github()  . Te preguntará que qué git protocol quieres usar. Selecciona https. Te preguntará si la Descvription está OK. Le dices que SI. Se creará el repo en Github y añadirá el remote origin y alguna cosa mas y lo dejará casí niquelado.
 usethis::use_github()
 
@@ -57,6 +55,13 @@ usethis::use_github_links() #- Populates the URL and BugReports fields of a GitH
 #usethis::use_coverage()  #- falta lo de CI (integracion continua tipo Travis)
 
 
+
+#----------------------
+use_build_ignore("_como_cree_el_pkg_v2.R")
+
+
+
+
 # TERCERA PARTE: subiendo cambios a Github -------------------------
 
 #--------------------- te vas a TERMINAL y haces esto para subir cambios (en realidad solo hace falta el git push)
@@ -72,16 +77,32 @@ git push -u origin master
 # git push -u origin master
 
 
-#- AQUI: he hecho hasta aquí
+#- CUARTA PARTE: subir ficheros de datos (partiendo desde RAW)
+usethis::use_data_raw()  #- crea un directorio "data-raw", y dentro crea un fichero DATASET.R. Ese fichero solo tiene la instrucción usethis::use_data("DATASET") para una vez creado DATASET, pues documentarlo etc....
+#- una vez has creado la carpeta /data-raw/ , alli está un fichero que me crea los df que quiero exportar en la carpeta /data/
+#- Recuerda que has de crear un fichero .R para cada df que quieras exportar (en la carpeta /R/)
 
-usethis::use_data_raw()  #- para crear el directorio con data-raw
+
+#- QUINTA PARTE: crear un fichero para cada funcion que quieras expòrtar (en la carpeta /R/)
+usethis::use_r("pjp_unique_values") #- para crear o modificar el fichero de la funcion
 
 
 
-#- Sharla
-#usethis::use_data_raw()
-#usethis::use_data(delay_codes)
-#usethis::use_r("setup")   #- para crear una funcion llamada setup()
+#- SEXTA PARTE: las dependencias
+use_package("purrr")
+use_package("dplyr")
+use_package("stringr")
+#use_package("tibble") #- ya estab eb IMPORTS
+
+
+
+, "dplyr", "tibble", "stringr")
+
+
+
+
+
+
 #- And when I build my package (command + shift + L, command + shift + D, and command + shift + B are your best friends), delay_codes is actually an object available in the package!
 
 
@@ -103,12 +124,6 @@ usethis::use_data_raw()  #- para crear el directorio con data-raw
 # browse_cran()
 
 
-use_()
-use_data()   #- save package data in the correct format
-use_data_raw()
-
-
-
 
 
 # Vignette ------------------
@@ -124,22 +139,6 @@ use_vignette(my_name_vignette2) #- sets you up for success by configuring DESCRI
 # title: "Intro to spanishRshapes package"
 # author: "Pedro J. Pérez"
 # %\VignetteIndexEntry{Intro to spanishRshapes package}
-
-
-
-
-
-#----------------------
-devtools::use_data_raw()  #- crea directorio de raw-data
-# haces el curro con los datos o las funciones
-# tanto en data_raw como en la documentacion en ./R/
-
-
-#----------------------
-use_build_ignore("_script.R")
-
-
-
 
 #--------------------  README
 #------ has de knittear README.Rmd para que aparezca README.md q es la que se muestra en Github por defecto
