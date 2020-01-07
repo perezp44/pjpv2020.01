@@ -322,9 +322,14 @@ person("Bea", "Hernández", role = "rev",
 remotes::install_github("perezp44/pjpv2020.01")
 library(pjpv2020.01)
 df <- pjp_data_pob_mun_1996_2019
+
+zz <- df %>% pjp_f_estadisticos_basicos()
+
+zz1 <- df %>% pjp_f_unique_values()
+zz2 <- df %>% pjp_f_valores_unicos(nn_pjp = 40)
+
 df <- pjp_data_cod_mun_INE
 df <- pjp_data_cod_prov_INE
 
 
-xx <- pjp_f_round_nice(iris)
-pjp_unique_values(df)
+xx <- pjp_f_decimales(iris)
