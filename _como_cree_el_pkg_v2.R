@@ -312,7 +312,7 @@ person("Bea", "Hernández", role = "rev",
 
 
 # ZZ: Usar el pkg pjpv2020.01 -----------------------------------------------------------------------------------------------
-# - z.1 para instalar y usar las funciones de pjpv2020.01 package --------------
+# - z.1 instalar el paquete pjpv2020.01 --------------
 remotes::install_github("perezp44/pjpv2020.01")
 library(pjpv2020.01)
 df <- pjp_data_pob_mun_1996_2019
