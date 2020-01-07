@@ -72,6 +72,9 @@ git push -u origin master
 # git push -u origin master
 
 
+#- AQUI: he hecho hasta aquí
+
+usethis::use_data_raw()  #- para crear el directorio con data-raw
 
 
 
@@ -271,12 +274,16 @@ person("Bea", "Hernández", role = "rev",
 
 
 
-usethis::use_git()                              #- t pregunta si haces el commit y dije que SI
+#- Un post GOOD: https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/
 
 
-
-
-
+#- https://www.rostrum.blog/2019/12/27/pkgs-2019/
+#- use_r() to create in the right place an R script for your functions
+#- use_vignette() and use_readme_md() for more documentation
+#- use_testthat() and use_test() for setting up tests
+#- use_package() to add packages to the Imports section of the DESCRIPTION file
+#- use_data() and use_data_raw() to add data sets to the package and the code used to create them
+#- There are also other flavours of function like git_*() and pr_*() to work with version control and proj_*() for working with RStudio Projects.
 
 #- Sharla
 #usethis::use_data_raw()
@@ -297,6 +304,8 @@ usethis::use_git()                              #- t pregunta si haces el commit
 
 
 # Web del pkg usethis: https://usethis.r-lib.org/
+
+#- un post de Enero de 20020: https://www.r-bloggers.com/writing-frictionless-r-package-wrappers-building-a-basic-r-package/  (de Bob Rudis). Tiene una precuela: https://rud.is/b/2020/01/01/writing-frictionless-r-package-wrappers-introduction/ y un bookdown: https://rud.is/books/writing-frictionless-r-package-wrappers/
 
 # Curso de Colin Fay: https://github.com/ColinFay/erum2018
 
