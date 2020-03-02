@@ -1,3 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+_documentacion_old/
+_f_en_curso/
+_como_cree_el_pkg_v2.R
+data-raw/
