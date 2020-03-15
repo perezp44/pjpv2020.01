@@ -1,5 +1,5 @@
 #- 2020/01/02: voy a volver a hacer un R pkg y esto es lo que hice:
-
+#- 2020/02/24: creo q este post me puede ayudar: https://rud.is/b/2020/01/03/writing-frictionless-r-package-wrappers-building-a-basic-r-package/
 # PRIMERA PARTE: iniciando el repo  -----------------
 # 0) Recuerda que NO has de crear antes el repo en Github
 
