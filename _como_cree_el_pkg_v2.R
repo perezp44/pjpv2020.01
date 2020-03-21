@@ -104,8 +104,6 @@ usethis::use_pipe()   #---------------------------------------- JEY!!!!
 devtools::document()  #- para que genere la documentacion de las funciones
 
 
-
-
 #- OCTAVA: Cuando quieras añadir un nuevo conjunto de datos al pkg ---------------------
 #- PARA AÑADIR un nuevo df u objeto:
 #- 1) Cargas el objeto en memoria de R con un archivo de ./data-raw/
@@ -113,7 +111,6 @@ devtools::document()  #- para que genere la documentacion de las funciones
 #- 3) Añadir la documentacion creando un fichero roxygen en ./R/mis_datos.R
 #- 4) Finalmente has de actualizar la documentacion con: devtools::document()
 #- 5) Llevarlo a Github
-
 
 
 #- NOVENA: Cuando quieras añadir una nueva f. al pkg --------------------------
@@ -327,3 +324,6 @@ df <- pjp_data_cod_mun_INE
 df <- pjp_data_cod_prov_INE
 
 xx <- pjp_f_decimales(iris)
+
+
+help(package = pjpv2020.01)
