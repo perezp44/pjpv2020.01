@@ -46,6 +46,15 @@ pjp_data_cod_prov_INE <- df
 
 
 
+#- 4) en lace de códigos eurostat (para ESP) con INE
+library(eurostat)
+aa <- eurostat::regional_changes_2016 %>% filter(str_detect(code13, "^ES")) #-codigos eurostat para entidades territoriales españoals
+#- las tuve que enlazar a mano: NUTS-1 son agrupaciones de CCAA; NUTS-2 son las CCAA y NUTS-3 las provincias, excepto en Baleares y canarias que NUTS-3 son islas!!!
+df <- rio::import(here::here("data-raw", "eurostat-codes-for-spain_a.xlsx"))
+
+pjp_data_cod_eurostat_INE <- df
+#usethis::use_data(pjp_data_cod_eurostat_INE, overwrite = TRUE)  #- los datos se graban en /data/
+
 
 
 
