@@ -326,4 +326,17 @@ df <- pjp_data_cod_prov_INE
 xx <- pjp_f_decimales(iris)
 
 
-help(package = pjpv2020.01)
+help(package = `pjpv2020.01`)
+
+
+
+#- Ya YA 2021 -------------------------
+
+#- NOVENA: Cuando quieras añadir una nueva f. al pkg --------------------------
+#- 1) Añadir el fichero con la definicion de la f en : ./R/my_funcion.R
+#- 3) En ese fichero ya pones la documentacion y si lo exportas con @export
+#- 4) Finalmente has de actualizar la documentacion con: devtools::document()
+#- 5) Llevarlo a Github
+remotes::install_github("perezp44/pjpv2020.01")
+
+

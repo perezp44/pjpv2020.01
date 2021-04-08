@@ -4,7 +4,8 @@
 \name{pjp_data_df_prueba}
 \alias{pjp_data_df_prueba}
 \title{df de prueba}
-\format{A data frame with 20 rows y 6 variables:
+\format{
+A data frame with 20 rows y 6 variables:
 \itemize{
 \item X_factor: es factor
 \item X_integer: integer
@@ -12,7 +13,8 @@
 \item X_numeric: double
 \item X_text: character
 \item X_POSIXct: POSIXct  POSIXt
-}}
+}
+}
 \usage{
 pjp_data_df_prueba
 }

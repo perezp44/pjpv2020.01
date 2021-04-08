@@ -4,7 +4,8 @@
 \name{pjp_data_cod_mun_INE}
 \alias{pjp_data_cod_mun_INE}
 \title{Codigos municipales (SPAIN)}
-\format{A data frame with 8.136 rows(municipios) y 10 variables
+\format{
+A data frame with 8.136 rows(municipios) y 10 variables
 \itemize{
 \item INECodMuni:   Codigo INE del municipio  (5 digitos)
 \item INECodMuni.n: Nombre del municipio
@@ -16,7 +17,8 @@
 \item NombreCCAA: Nombre de la C.A.
 \item year_first:
 \item year_last:
-}}
+}
+}
 \usage{
 pjp_data_cod_mun_INE
 }

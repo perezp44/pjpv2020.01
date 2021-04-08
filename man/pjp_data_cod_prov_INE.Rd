@@ -8,7 +8,8 @@
 NUTS1 son agrupaciones de CC.AA
 NUTS2 son CC.AA
 NUTS3 son provincias, salvo para Baleraes y Canarias que se corresponden con islas!!}
-\format{A data frame with 89 rows (provincias) y 9 variables
+\format{
+A data frame with 89 rows (provincias) y 9 variables
 \itemize{
 \item code13:   Codigo Eurostat
 \item code16:   Codigo Eurostat
@@ -19,7 +20,16 @@ NUTS3 son provincias, salvo para Baleraes y Canarias que se corresponden con isl
 \item INECodProv.n: Nombre de la provincia
 \item INECodCCAA: Código INE de la C.A. (2 digitos)
 \item NombreCCAA: Nombre de la C.A.
-}}
+}
+
+A data frame with 52 rows (provincias) y 4 variables
+\itemize{
+\item INECodProv:   Codigo INE de la provincia  (2 digitos)
+\item INECodProv.n: Nombre de la provincia
+\item INECodCCAA: Código INE de la C.A. (2 digitos)
+\item NombreCCAA: Nombre de la C.A.
+}
+}
 \usage{
 pjp_data_cod_prov_INE
 
