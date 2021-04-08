@@ -27,7 +27,7 @@ theme_pjp_maps <- function(){
         legend.background = ggplot2::element_rect(fill = "#f5f5f2", color = NA),
         panel.border = ggplot2::element_blank(),
         strip.text.x = ggplot2::element_blank(),
-        strip.background = element_rect(colour="white", fill="white"),
+        strip.background = ggplot2::element_rect(colour="white", fill="white"),
         legend.position = c(.9,.2),
         plot.title = ggplot2::element_text(size = 16, face = "bold")
         )
