@@ -13,8 +13,8 @@
 #'
 #' @export
 pjp_template_slides_verdes <-
-  function(name = "slides_xx_verdes.Rmd", open = interactive(), ... ) {
-  use_template("slides_verdes.Rmd", save_as = name,
+  function(name = "slides_xx_verdes", open = interactive(), ... ) {
+  use_template("slides_verdes.Rmd", save_as = paste0(name, ".Rmd"),
                package = "pjpv2020.01", ... , open = open)
   fs::dir_create("./assets/")
   use_template("slides_verdes.css", save_as = "./assets/slides_verdes.css",

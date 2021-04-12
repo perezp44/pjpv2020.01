@@ -5,7 +5,7 @@
 \title{Call and open la plantilla para crear unas slides verdes}
 \usage{
 pjp_template_slides_verdes(
-  name = "slides_xx_verdes.Rmd",
+  name = "slides_xx_verdes",
   open = interactive(),
   ...
 )
