@@ -6,8 +6,6 @@
 #' @examples
 #' pjp_f_valores_unicos(cars)
 
-
-
 pjp_f_valores_unicos <- function(df, nn_pjp = 50) {
 cc <- data.frame(x = 1:nn_pjp)
   for(ii in 1:length(df)){
