@@ -4,7 +4,7 @@ author: Pedro J. Pérez
 date: "Marzo de 2021 (actualizado el `r format(Sys.time(), '%d %B %Y')`)"
 output:
   html_document:
-    css: !expr here::here("assets", "bitacora_pjp.css")  
+    css: !expr here::here("assets", "bitacora.css")  
     theme: paper
     highlight: textmate
     self_contained: yes
