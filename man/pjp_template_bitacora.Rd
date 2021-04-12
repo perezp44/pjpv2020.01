@@ -2,23 +2,16 @@
 % Please edit documentation in R/pjp_template_bitacora.R
 \name{pjp_template_bitacora}
 \alias{pjp_template_bitacora}
-\title{Call and open la plantilla para crear una bitacora}
+\title{call and open la plantilla para crear una bitacora}
 \usage{
 pjp_template_bitacora(name = NULL, open = interactive(), ...)
 }
 \arguments{
 \item{name}{name of your TidyTuesday analysis file}
-
-\item{open}{should the file be opened after being created}
 }
 \description{
-Usar la plantilla para bitacoras y empezar a documentar el Rproject
+Uuar la plantilla para bitacoras y empezar a documentar el Rproject
 }
 \examples{
-\donttest{
-if(interactive()){
-  use_tidytemplate(name = "My_Awesome_TidyTuesday.Rmd")
-}
-}
-
+pjp_template_bitacora()
 }
