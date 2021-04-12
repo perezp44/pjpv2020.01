@@ -11,7 +11,7 @@
 
 
 pjp_template_bitacora <- function(name = NULL, open = interactive() ){
-  use_template("bitacora.Rmd", save_as = "bitacora.Rmd", package = "pjpv2020.01", ... , open = open)
+  use_template("bitacora.Rmd", save_as = "bitacora.Rmd", package = "pjpv2020.01"  , open = open)
   fs::dir_create("./datos/")
   fs::dir_create("./imagenes/")
   fs::dir_create("./assets/")
