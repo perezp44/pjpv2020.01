@@ -4,10 +4,12 @@
 \alias{pjp_template_bitacora}
 \title{call and open la plantilla para crear una bitacora}
 \usage{
-pjp_template_bitacora(name = NULL, open = interactive(), ...)
+pjp_template_bitacora(name = NULL, open = interactive())
 }
 \arguments{
 \item{name}{name of your TidyTuesday analysis file}
+
+\item{open}{si estas en interactivo ono}
 }
 \description{
 Uuar la plantilla para bitacoras y empezar a documentar el Rproject
