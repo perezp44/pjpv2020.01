@@ -16,7 +16,6 @@ output:
       smooth_scroll: false
 ---
 
-
 ```{r chunk_setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, message = FALSE, warning = FALSE, 
                       cache = FALSE, cache.path = "/caches/", comment = "#>",
@@ -27,17 +26,13 @@ knitr::opts_chunk$set(echo = TRUE, eval = TRUE, message = FALSE, warning = FALSE
                       fig.asp = 0.618, fig.width = 6, out.width = "70%", fig.align = "center")
 ```
 
-
 ```{r, echo = FALSE, message = FALSE}
 options(scipen = 999) #- quitar notación científica
 options("yaml.eval.expr" = TRUE)  #- pa que no se queje el yaml de evaluar expr: https://github.com/viking/r-yaml/issues/47
 library(tidyverse)
 ```
 
-
-
 --------------------------------------
-
 
 El objetivo del Rproject es ... 
 
