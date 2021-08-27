@@ -6,7 +6,8 @@
 #' @importFrom usethis use_template
 #' @importFrom fs dir_create
 #' @examples
-#' pjp_template_rmd()
+#' pjp_template_rmd()pjp_template_rmd()
+
 #' @export
 
 
