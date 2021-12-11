@@ -6,8 +6,7 @@
 \alias{pjpv2020.01-package}
 \title{pjpv2020.01: Paquete de uso personal}
 \description{
-Paquete para uso personal con algunas
-    funciones y conjuntos de datos
+Paquete para uso personal con algunas funciones y conjuntos de datos
 }
 \seealso{
 Useful links:

@@ -15,5 +15,5 @@ pjp_template_rmd(name = "titulito", open = interactive())
 Uuar la plantilla para crear un archivo .Rmd
 }
 \examples{
-pjp_template_rmd()
+pjp_template_rmd()pjp_template_rmd()
 }

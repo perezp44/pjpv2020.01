@@ -2,6 +2,7 @@
 
 export("%>%")
 export(pjp_f_decimales)
+export(pjp_f_dicc)
 export(pjp_f_estadisticos_basicos)
 export(pjp_f_not_in)
 export(pjp_f_round_nice)
