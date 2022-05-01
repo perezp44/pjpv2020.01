@@ -32,6 +32,10 @@ options("yaml.eval.expr" = TRUE)  #- pa que no se queje el yaml de evaluar expr:
 library(tidyverse)
 ```
 
+```{r klippy, echo = FALSE}
+klippy::klippy(position = c("top", "right")) #- remotes::install_github("rlesur/klippy")
+```
+
 --------------------------------------
 
 El objetivo del Rproject es ... 
